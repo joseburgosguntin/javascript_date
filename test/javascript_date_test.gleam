@@ -69,7 +69,15 @@ pub fn from_year_month_index_day_hours_minutes_seconds_test() {
 }
 
 pub fn from_year_month_index_day_hours_minutes_seconds_milliseconds_test() {
-  date.from_year_month_index_day_hours_minutes_seconds_milliseconds(0, 0, 0, 0, 0, 0, 0)
+  date.from_year_month_index_day_hours_minutes_seconds_milliseconds(
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  )
   |> should.equal(date.from_iso_string(from_test_date))
 }
 
@@ -270,18 +278,18 @@ pub fn to_json_test() {
 
 pub fn to_utc_string_test() {
   date.from_iso_string(test_date)
-  |> date.to_utc_string 
+  |> date.to_utc_string
   |> should.equal("Sat, 27 Apr 2024 20:55:43 GMT")
 }
 
 pub fn to_milliseconds() {
   date.from_iso_string(test_date)
-  |> date.to_milliseconds 
-  |> should.equal(01714251343488)
+  |> date.to_milliseconds
+  |> should.equal(01_714_251_343_488)
 }
 
 pub fn value_of_test() {
   date.from_iso_string(test_date)
-  |> date.value_of 
-  |> should.equal(01714251343488)
+  |> date.value_of
+  |> should.equal(01_714_251_343_488)
 }

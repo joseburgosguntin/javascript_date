@@ -169,7 +169,10 @@ pub fn to_json(date: Date) -> String
 pub fn to_locale_date_string(date: Date) -> String
 
 @external(javascript, "./ffi.mjs", "toLocaleDateStringWithLanguageTag")
-pub fn to_locale_date_string_with_language_tag(date: Date, tag: String) -> String
+pub fn to_locale_date_string_with_language_tag(
+  date: Date,
+  tag: String,
+) -> String
 
 @external(javascript, "./ffi.mjs", "toLocaleString")
 pub fn to_locale_string(date: Date) -> String
@@ -181,7 +184,10 @@ pub fn to_locale_string_with_language_tag(date: Date, tag: String) -> String
 pub fn to_locale_time_string(date: Date) -> String
 
 @external(javascript, "./ffi.mjs", "toLocaleTimeStringWithLanguageTag")
-pub fn to_locale_time_string_with_language_tag(date: Date, tag: String) -> String
+pub fn to_locale_time_string_with_language_tag(
+  date: Date,
+  tag: String,
+) -> String
 
 @external(javascript, "./ffi.mjs", "toString")
 pub fn to_string(date: Date) -> String
