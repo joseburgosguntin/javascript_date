@@ -1,7 +1,9 @@
 name = "javascript_date"
 version = "1.0.0"
 target = "javascript"
+description = "📅 Date bindings in Gleam for Javascript"
 licences = ["GPL-3.0-only"]
+repository = { type = "github", user = "joseburgosguntin", repo = "javascript_date" }
 
 [dependencies]
 gleam_stdlib = "~> 0.34 or ~> 1.0"
