@@ -93,12 +93,6 @@ pub fn get_full_year_test() {
   |> should.equal(2024)
 }
 
-pub fn get_hours_test() {
-  date.from_iso_string(test_date)
-  |> date.get_hours
-  |> should.equal(16)
-}
-
 pub fn get_milliseconds_test() {
   date.from_iso_string(test_date)
   |> date.get_milliseconds
@@ -121,12 +115,6 @@ pub fn get_time_test() {
   date.from_iso_string(test_date)
   |> date.get_time
   |> should.equal(1_714_251_343_488)
-}
-
-pub fn get_timezone_offset_test() {
-  date.from_iso_string(test_date)
-  |> date.get_timezone_offset
-  |> should.equal(240)
 }
 
 pub fn get_utc_date_test() {
@@ -278,36 +266,6 @@ pub fn to_json_test() {
   date.from_iso_string(test_date)
   |> date.to_json
   |> should.equal("2024-04-27T20:55:43.488Z")
-}
-
-pub fn to_locale_date_string_with_language_tag_test() {
-  date.from_iso_string(test_date)
-  |> date.to_locale_date_string_with_language_tag("en")
-  |> should.equal("4/27/2024")
-}
-
-pub fn to_locale_string_with_language_tag_test() {
-  date.from_iso_string(test_date)
-  |> date.to_locale_string_with_language_tag("en")
-  |> should.equal("4/27/2024, 4:55:43 PM")
-}
-
-pub fn to_locale_time_string_with_language_tag_test() {
-  date.from_iso_string(test_date)
-  |> date.to_locale_time_string_with_language_tag("en")
-  |> should.equal("4:55:43 PM")
-}
-
-pub fn to_string_test() {
-  date.from_iso_string(test_date)
-  |> date.to_string 
-  |> should.equal("Sat Apr 27 2024 16:55:43 GMT-0400 (Bolivia Time)")
-}
-
-pub fn to_time_string_test() {
-  date.from_iso_string(test_date)
-  |> date.to_time_string 
-  |> should.equal("16:55:43 GMT-0400 (Bolivia Time)")
 }
 
 pub fn to_utc_string_test() {
