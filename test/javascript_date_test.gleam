@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/regex
+import gleam/string
 import gleeunit
 import gleeunit/should
 import javascript_date as date
