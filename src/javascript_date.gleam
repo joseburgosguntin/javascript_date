@@ -1,5 +1,3 @@
-// import gleam/javascript/array
-
 pub type Date
 
 // constructors
